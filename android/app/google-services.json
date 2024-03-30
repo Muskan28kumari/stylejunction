@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1032734429286",
+    "project_id": "phone-firebase-70ea2",
+    "storage_bucket": "phone-firebase-70ea2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032734429286:android:f4b4ae6f40420a767fdda7",
+        "android_client_info": {
+          "package_name": "com.example.stylejunction"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9ZQJzhPb6dS6-nb_ie5ext4Qp5ZqiAEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
