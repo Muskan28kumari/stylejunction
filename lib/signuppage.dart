@@ -1,7 +1,9 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:stylejunction/otppage.dart';
+import 'package:provider/provider.dart';
+//import 'package:stylejunction/otppage.dart';
+import 'package:stylejunction/provide/auth_provider.dart';
 
 class SignupScreen extends StatefulWidget {
   @override
@@ -212,8 +214,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ElevatedButton(
                     onPressed: () {
                       // Implement phone number verification logic and navigate to the OTP screen.
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => OtpScreen()));
+                      sendPhoneNumber();
                     },
                     child: Text('Continue'),
                   ),
@@ -268,5 +269,11 @@ class _SignupScreenState extends State<SignupScreen> {
         ),
       ),
     );
+  }
+
+  void sendPhoneNumber() {
+    final ap = Provider.of<AuthProvider>(context, listen: false);
+    String phoneNumber = phoneNumberController.text.trim();
+    ap.signInWithPhone(context, "+${selectedCountry.phoneCode}$phoneNumber");
   }
 }
